@@ -1,0 +1,19 @@
+import tkinter as tk
+from tkinter import messagebox
+
+def check_winner():
+    for combo in [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]]:
+        if buttons[combo[0]]["text"] == buttons[combo[1]]["text"] == buttoms[combo[2]]["text"] !="":
+            buttoms[combo[0]].config(bg="green")
+            buttoms[combo[1]].config(bg="green")
+            buttoms[combo[2]].config(bg="green")
+            messagebox.showinfo("TIC TAC TOE", f"player {buttons[combo[0]]['text']}wins!")
+            root.quit()
+
+def button_click(index):
+    if buttons[index]["text"] == "" and not winner:
+        buttons[index]["text"] = current_player
+        check_winner()
+        toggle_player()
+        
+
